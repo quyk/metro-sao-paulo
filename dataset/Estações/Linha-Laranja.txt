@@ -1,0 +1,16 @@
+CREATE (brasilandia:Estacao {Id: 35, Estacao: 'Brasilândia', Linha: 6})
+CREATE (vila_cardoso:Estacao {Id: 36, Estacao: 'Vila Cardoso', Linha: 6})
+CREATE (itaberaba:Estacao {Id: 37, Estacao: 'Itaberaba', Linha: 6})
+CREATE (joao_paulo_i:Estacao {Id: 38, Estacao: 'João Paulo I', Linha: 6})
+CREATE (freguesia_do_o:Estacao {Id: 39, Estacao: 'Freguesia do Ó', Linha: 6})
+CREATE (santa_marina:Estacao {Id: 40, Estacao: 'Santa Marina', Linha: 6})
+CREATE (agua_branca:Estacao {Id: 41, Estacao: 'Água Branca', Linha: 6})
+CREATE (sesc_pompeia:Estacao {Id: 42, Estacao: 'SESC-Pompéia', Linha: 6})
+CREATE (perdizes:Estacao {Id: 43, Estacao: 'Perdizes', Linha: 6})
+CREATE (puc_cardoso_de_almeida:Estacao {Id: 44, Estacao: 'PUC-Cardoso de Almeida', Linha: 6})
+CREATE (angelica_pacaembu:Estacao {Id: 45, Estacao: 'Angélica-Pacaembu', Linha: 6})
+CREATE (higienopolis_mackenzie:Estacao {Id: 46, Estacao: 'Higienópolis-Mackenzie', Linha: 6})
+CREATE (desseseis_bis:Estacao {Id: 47, Estacao: '16 Bis', Linha: 6})
+CREATE (bela_vista:Estacao {Id: 48, Estacao: 'Bela Vista', Linha: 6})
+CREATE (sao_joaquim:Estacao {Id: 49, Estacao: 'São Joaquim', Linha: 6});
+

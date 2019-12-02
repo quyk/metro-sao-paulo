@@ -1,0 +1,15 @@
+CREATE (vila_sonia:Estacao {Id:1, Estacao: 'Vila Sônia', Linha: 4})
+CREATE (sao_paulo_morumbi:Estacao {Id:2, Estacao: 'São Paulo-Morumbi', Linha: 4})
+CREATE (butanta:Estacao {Id:3, Estacao: 'Butantã', Linha: 4})
+CREATE (pinheiros:Estacao {Id:4, Estacao: 'Pinheiros', Linha: 4})
+CREATE (faria_lima:Estacao {Id:5, Estacao: 'Faria Lima', Linha: 4})
+CREATE (fradique_coutinho:Estacao {Id:6, Estacao: 'Fradique Coutinho', Linha: 4})
+CREATE (oscar_freire:Estacao {Id:7, Estacao: 'Oscar Freire', Linha: 4})
+CREATE (Paulista:Estacao {Id:8, Estacao: 'Paulista', Linha: 4})
+CREATE (higienopolis_mackenzie:Estacao {Id:9, Estacao: 'Higienópolis-Mackenzie', Linha: 4})
+CREATE (republica:Estacao {Id:10, Estacao: 'República', Linha: 4})
+CREATE (luz:Estacao {Id:11, Estacao: 'Luz', Linha: 4});
+
+MATCH (e:Estacao { Id: 8 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:INTEGRA]->(e);

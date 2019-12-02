@@ -1,0 +1,17 @@
+version: '3'
+services:
+  neo4j:
+    image: neo4j:3.5.13
+    hostname: neo4j
+    container_name: neo4j
+    ports:
+      - 7474:7474
+      - 6477:6477
+      - 7687:7687
+    volumes:
+      - ./plugins:/plugins/plugins
+      - ./conf:/conf
+      - ./data:/data
+      - ./logs:/logs
+    environment:
+      NEO4J_AUTH: "neo4j/changeme"

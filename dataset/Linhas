@@ -1,0 +1,37 @@
+CREATE (azul:Linha  {Linha: 1, Titulo: 'Azul'})
+CREATE (verde:Linha {Linha: 2, Titulo: 'Verde'})
+CREATE (vermelha:Linha {Linha: 3 , Titulo: 'Vermelha'})
+CREATE (amarela:Linha {Linha: 4 , Titulo: 'Amarela'})
+CREATE (lilas:Linha {Linha: 5 , Titulo: 'Lilás'})
+CREATE (laranja:Linha {Linha: 6 , Titulo: 'Laranja'})
+CREATE (prata:Linha {Linha: 15 , Titulo: 'Prata'});
+
+MATCH (e:Estacao { Linha: 1 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:CONTEM]->(e);
+
+MATCH (e:Estacao { Linha: 2 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:CONTEM]->(e);
+
+MATCH (e:Estacao { Linha: 3 }) 
+MATCH (l:Linha { Linha: 3 })
+MERGE (l)-[:CONTEM]->(e);
+
+MATCH (e:Estacao { Linha: 4 }) 
+MATCH (l:Linha { Linha: 4 })
+MERGE (l)-[:CONTEM]->(e);
+
+MATCH (e:Estacao { Linha: 5 }) 
+MATCH (l:Linha { Linha: 5 })
+MERGE (l)-[:CONTEM]->(e);
+
+MATCH (e:Estacao { Linha: 6 }) 
+MATCH (l:Linha { Linha: 6 })
+MERGE (l)-[:CONTEM]->(e); 
+
+MATCH (e:Estacao { Linha: 15 }) 
+MATCH (l:Linha { Linha: 15 })
+MERGE (l)-[:CONTEM]->(e);
+
+

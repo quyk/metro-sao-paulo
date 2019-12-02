@@ -1,0 +1,46 @@
+CREATE (vila_madalena:Estacao {Id: 85, Estacao: 'Vila Madalena', Linha: 2})
+CREATE (santuario_nossa_senhora_de_fatima_sumare:Estacao {Id: 86, Estacao: 'Santuário Nossa Senhora de Fátima-Sumaré', Linha: 2})
+CREATE (clinicas:Estacao {Id: 87, Estacao: 'Clínicas', Linha: 2})
+CREATE (consolacao:Estacao {Id: 88, Estacao: 'Consolação', Linha: 2})
+CREATE (trianon_masp:Estacao {Id: 89, Estacao: 'Trianon-Masp', Linha: 2})
+CREATE (brigadeiro:Estacao {Id: 90, Estacao: 'Brigadeiro', Linha: 2})
+CREATE (paraiso:Estacao {Id: 91, Estacao: 'Paraíso', Linha: 2})
+CREATE (ana_rosa:Estacao {Id: 92, Estacao: 'Ana Rosa', Linha: 2})
+CREATE (chacara_klabin:Estacao {Id: 93, Estacao: 'Chácara Klabin', Linha: 2})
+CREATE (santos_imigrantes:Estacao {Id: 94, Estacao: 'Santos-Imigrantes', Linha: 2})
+CREATE (alto_do_ipiranga:Estacao {Id: 95, Estacao: 'Alto do Ipiranga', Linha: 2})
+CREATE (sacoma:Estacao {Id: 96, Estacao: 'Sacomã', Linha: 2})
+CREATE (tamanduatei:Estacao {Id: 97, Estacao: 'Tamanduateí', Linha: 2})
+CREATE (vila_prudente_orfanato:Estacao {Id: 98, Estacao: 'Vila Prudente · Orfanato', Linha: 2})
+CREATE (agua_rasa:Estacao {Id: 99, Estacao: 'Água Rasa', Linha: 2})
+CREATE (analia_franco:Estacao {Id: 100, Estacao: 'Anália Franco', Linha: 2})
+CREATE (vila_formosa:Estacao {Id: 101, Estacao: 'Vila Formosa', Linha: 2})
+CREATE (guilherme_giorgi:Estacao {Id: 102, Estacao: 'Guilherme Giorgi', Linha: 2})
+CREATE (nova_manchester:Estacao {Id: 103, Estacao: 'Nova Manchester', Linha: 2})
+CREATE (aricanduva:Estacao {Id: 104, Estacao: 'Aricanduva', Linha: 2})
+CREATE (penha:Estacao {Id: 105, Estacao: 'Penha', Linha: 2})
+CREATE (penha_de_franca:Estacao {Id: 106, Estacao: 'Penha de França', Linha: 2})
+CREATE (tiquatira:Estacao {Id: 107, Estacao: 'Tiquatira', Linha: 2})
+CREATE (paulo_freire:Estacao {Id: 108, Estacao: 'Paulo Freire', Linha: 2})
+CREATE (ponte_grande:Estacao {Id: 109, Estacao: 'Ponte Grande', Linha: 2})
+CREATE (dutra:Estacao {Id: 110, Estacao: 'Dutra', Linha: 2});
+
+MATCH (e:Estacao { Id: 88 }) 
+MATCH (l:Linha { Linha: 4 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 91 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 92 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 93 }) 
+MATCH (l:Linha { Linha: 5 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 98 }) 
+MATCH (l:Linha { Linha: 15 })
+MERGE (l)-[:INTEGRA]->(e);

@@ -1,0 +1,14 @@
+// Estacao das linha Azul
+MATCH (l:Linha) -[:CONTEM]->(:Estacao)
+WHERE l.Titulo = 'Azul' 
+RETURN l;
+
+
+// Integrações linha Amarela
+MATCH (l:Linha{Linha: 4}) -[:INTEGRA]->(e:Estacao)
+RETURN l, e;
+
+// Integrações da Estacao paraiso
+MATCH (l:Linha) -[:INTEGRA]->(e:Estacao)
+WHERE e.Estacao = 'Paraíso'
+RETURN l, e;

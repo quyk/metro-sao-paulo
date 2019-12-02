@@ -1,0 +1,22 @@
+CREATE (ipiranga:Estacao {Id: 67, Estacao: 'Ipiranga', Linha: 15})
+CREATE (vila_prudente:Estacao {Id: 68, Estacao: 'Vila Prudente', Linha: 15})
+CREATE (oratorio:Estacao {Id: 69, Estacao: 'Oratório', Linha: 15})
+CREATE (sao_lucas:Estacao {Id: 70, Estacao: 'São Lucas', Linha: 15})
+CREATE (camilo_haddad:Estacao {Id: 71, Estacao: 'Camilo Haddad', Linha: 15})
+CREATE (vila_tolstoi:Estacao {Id: 72, Estacao: 'Vila Tolstói', Linha: 15})
+CREATE (vila_uniao:Estacao {Id: 73, Estacao: 'Vila União', Linha: 15})
+CREATE (jardim_planalto:Estacao {Id: 74, Estacao: 'Jardim Planalto', Linha: 15})
+CREATE (sapopemba:Estacao {Id: 75, Estacao: 'Sapopemba', Linha: 15})
+CREATE (fazenda_da_juta:Estacao {Id: 76, Estacao: 'Fazenda da Juta', Linha: 15})
+CREATE (sao_mateu:Estacao {Id: 77, Estacao: 'São Mateu', Linha: 15})
+CREATE (iguatemi:Estacao {Id: 78, Estacao: 'Iguatemi', Linha: 15})
+CREATE (jequirica:Estacao {Id: 79, Estacao: 'Jequiriçá', Linha: 15})
+CREATE (jacu_pessego:Estacao {Id: 80, Estacao: 'Jacú-Pêssego', Linha: 15})
+CREATE (erico_semer:Estacao {Id: 81, Estacao: 'Érico Semer', Linha: 15})
+CREATE (marcio_beck:Estacao {Id: 82, Estacao: 'Márcio Beck', Linha: 15})
+CREATE (cidade_tiradentes:Estacao {Id: 83, Estacao: 'Cidade Tiradentes', Linha: 15})
+CREATE (hospital_cidade_tiradentes:Estacao {Id: 84, Estacao: 'Hospital Cidade Tiradentes', Linha: 15});
+
+MATCH (e:Estacao { Id: 68 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:INTEGRA]->(e);

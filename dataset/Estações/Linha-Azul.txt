@@ -1,0 +1,39 @@
+CREATE (tucuruvi:Estacao {Id: 12, Estacao: 'Tucuruvi', Linha: 1})
+CREATE (parada_inglesa:Estacao {Id: 13, Estacao: 'Parada Inglesa', Linha: 1})
+CREATE (jardim_sao_paulo_ayrton_Senna:Estacao {Id: 14, Estacao: 'Jardim São Paulo-Ayrton Senna', Linha: 1})
+CREATE (santana:Estacao {Id: 15, Estacao: 'Santana', Linha: 1})
+CREATE (carandiru:Estacao {Id: 16, Estacao: 'Carandiru', Linha: 1})
+CREATE (portuguesa_tiete:Estacao {Id: 17, Estacao: 'Portuguesa-Tietê', Linha: 1})
+CREATE (armenia:Estacao {Id: 18, Estacao: 'Armênia', Linha: 1})
+CREATE (tiradentes:Estacao {Id: 19, Estacao: 'Tiradentes', Linha: 1})
+CREATE (luz:Estacao {Id: 20, Estacao: 'Luz', Linha: 1})
+CREATE (sao_bento:Estacao {Id: 21, Estacao: 'São Bento', Linha: 1})
+CREATE (se:Estacao {Id: 22, Estacao: 'Sé', Linha: 1})
+CREATE (japao_liberdade:Estacao {Id: 23, Estacao: 'Japão-Liberdade', Linha: 1})
+CREATE (sao_joaquim:Estacao {Id: 24, Estacao: 'São Joaquim', Linha: 1})
+CREATE (vergueiro:Estacao {Id: 25, Estacao: 'Vergueiro', Linha: 1})
+CREATE (paraiso:Estacao {Id: 26, Estacao: 'Paraíso', Linha: 1})
+CREATE (ana_rosa:Estacao {Id: 27, Estacao: 'Ana Rosa', Linha: 1})
+CREATE (vila_mariana:Estacao {Id: 28, Estacao: 'Vila Mariana', Linha: 1})
+CREATE (santa_cruz:Estacao {Id: 29, Estacao: 'Santa Cruz', Linha: 1})
+CREATE (praca_da_arvore:Estacao {Id: 30, Estacao: 'Praça da Árvore', Linha: 1})
+CREATE (saude:Estacao {Id: 31, Estacao: 'Saúde', Linha: 1})
+CREATE (sao_judas:Estacao {Id: 32, Estacao: 'São Judas', Linha: 1})
+CREATE (conceicao:Estacao {Id: 33, Estacao: 'Conceição', Linha: 1})
+CREATE (jabaquara:Estacao {Id: 34, Estacao: 'Jabaquara', Linha: 1});
+
+MATCH (e:Estacao { Id: 20 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 22 }) 
+MATCH (l:Linha { Linha: 3 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 26 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 27 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:INTEGRA]->(e);

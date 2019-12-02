@@ -1,0 +1,26 @@
+CREATE (palmeiras_barra_funda:Estacao {Id:111, Estacao: 'Palmeiras-Barra Funda', Linha: 3})
+CREATE (marechal_deodoro:Estacao {Id: 112, Estacao: 'Marechal Deodoro', Linha: 3})
+CREATE (santa_cecilia:Estacao {Id: 113,Estacao: 'Santa Cecília', Linha: 3})
+CREATE (republica:Estacao {Id: 114, Estacao: 'República', Linha: 3})
+CREATE (anhangabau:Estacao {Id: 115, Estacao: 'Anhangabaú, Linha: 3'})
+CREATE (se:Estacao {Id: 116, Estacao: 'Sé', Linha: 3})
+CREATE (pedro_ii:Estacao {Id: 117, Estacao: 'Pedro II', Linha: 3})
+CREATE (bras:Estacao {Id: 118, Estacao: 'Brás', Linha: 3})
+CREATE (bresser_mooca:Estacao {Id: 119, Estacao: 'Bresser-Mooca', Linha: 3})
+CREATE (belem:Estacao {Id: 120, Estacao: 'Belém', Linha: 3})
+CREATE (tatuape:Estacao {Id: 121, Estacao: 'Tatuapé', Linha: 3})
+CREATE (carrao:Estacao {Id: 122, Estacao: 'Carrão', Linha: 3})
+CREATE (penha:Estacao {Id: 123, Estacao: 'Penha', Linha: 3})
+CREATE (vila_matilde:Estacao {Id: 124, Estacao: 'Vila Matilde', Linha: 3})
+CREATE (guilhermina_esperanca:Estacao {Id: 125, Estacao: 'Guilhermina-Esperança', Linha: 3})
+CREATE (patriarca:Estacao {Id: 126, Estacao: 'Patriarca', Linha: 3})
+CREATE (artur_alvim:Estacao {Id: 127, Estacao: 'Artur Alvim', Linha: 3})
+CREATE (corinthians_itaquera:Estacao {Id: 128, Estacao: 'Corinthians-Itaquera', Linha: 3});
+
+MATCH (e:Estacao { Id: 114 }) 
+MATCH (l:Linha { Linha: 4 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 116 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:INTEGRA]->(e);

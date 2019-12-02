@@ -1,0 +1,25 @@
+CREATE (capao_redondo:Estacao {Id: 50, Estacao: 'Capão Redondo', Linha: 5})
+CREATE (campo_limpo:Estacao {Id: 51, Estacao: 'Campo Limpo', Linha: 5})
+CREATE (vila_das_belezas:Estacao {Id: 52, Estacao: 'Vila das Belezas', Linha: 5})
+CREATE (giovanni_gronchi:Estacao {Id: 53, Estacao: 'Giovanni Gronchi', Linha: 5})
+CREATE (santo_amaro:Estacao {Id: 54, Estacao: 'Santo Amaro', Linha: 5})
+CREATE (largo_treze:Estacao {Id: 55, Estacao: 'Largo Treze', Linha: 5})
+CREATE (adolfo_pinheiro:Estacao {Id: 56, Estacao: 'Adolfo Pinheiro', Linha: 5})
+CREATE (alto_da_boa_vista:Estacao {Id: 57, Estacao: 'Alto da Boa Vista', Linha: 5})
+CREATE (borba_gato:Estacao {Id: 58, Estacao: 'Borba Gato', Linha: 5})
+CREATE (brooklin:Estacao {Id: 59, Estacao: 'Brooklin', Linha: 5})
+CREATE (campo_belo:Estacao {Id: 60, Estacao: 'Campo Belo', Linha: 5})
+CREATE (eucaliptos:Estacao {Id: 61, Estacao: 'Eucaliptos', Linha: 5})
+CREATE (moema:Estacao {Id: 62, Estacao: 'Moema', Linha: 5})
+CREATE (aacd_servidor:Estacao {Id: 63, Estacao: 'AACD-Servidor', Linha: 5})
+CREATE (hospital_sao_paulo:Estacao {Id: 64, Estacao: 'Hospital São Paulo', Linha: 5})
+CREATE (santa_cruz:Estacao {Id: 65, Estacao: 'Santa Cruz', Linha: 5})
+CREATE (chacara_klabin:Estacao {Id: 66, Estacao: 'Chácara Klabin', Linha: 5});
+
+MATCH (e:Estacao { Id: 65 }) 
+MATCH (l:Linha { Linha: 1 })
+MERGE (l)-[:INTEGRA]->(e);
+
+MATCH (e:Estacao { Id: 66 }) 
+MATCH (l:Linha { Linha: 2 })
+MERGE (l)-[:INTEGRA]->(e);
